@@ -1,0 +1,57 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #050a14;
+  --surface: #0d1526;
+  --surface2: #111d35;
+  --border: rgba(99,179,237,0.12);
+  --accent: #3b82f6;
+  --accent2: #06b6d4;
+  --accent3: #8b5cf6;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --text: #e2e8f0;
+  --text-muted: #64748b;
+  --glow: rgba(59,130,246,0.3);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+/* ── Leaflet harita özelleştirmeleri ── */
+.leaflet-container { background: #030810 !important; }
+.leaflet-popup-content-wrapper {
+  background: #0d1526 !important;
+  border: 1px solid rgba(99,179,237,0.2) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
+  color: #e2e8f0 !important;
+}
+.leaflet-popup-tip { background: #0d1526 !important; }
+.leaflet-popup-close-button { color: #64748b !important; }
+.leaflet-control-zoom a {
+  background: rgba(13,21,38,0.95) !important;
+  border-color: rgba(99,179,237,0.15) !important;
+  color: #64748b !important;
+}
+.leaflet-control-zoom a:hover { background: rgba(59,130,246,0.2) !important; color: #3b82f6 !important; }
+
+.map-marker { transition: transform 0.2s, box-shadow 0.2s; }
+.map-marker:hover { transform: scale(1.2) !important; }
+
+@keyframes markerPulse {
+  0%, 100% { box-shadow: 0 0 10px currentColor; }
+  50%       { box-shadow: 0 0 25px currentColor; }
+}
