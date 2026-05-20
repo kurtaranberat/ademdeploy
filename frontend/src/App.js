@@ -14,7 +14,7 @@ import NavBar from './components/NavBar';
 import GlobalFilter from './components/GlobalFilter';
 import './App.css';
 
-const API = 'http://localhost:5000/api';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
 export default function App() {
   const [data, setData] = useState({
